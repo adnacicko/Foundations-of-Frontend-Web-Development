@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Page</title>
+</head>
+<body>
+<div style="text-align: center">
+    <img src="./ibu.png" alt="International Burch University" width="150" height="50" style="vertical-align:middle">
+    <h2>International Burch University</h2>
+</div>
+
+<h1>REGISTRATION FORM</h1>
+<form action="/action_page.php">
+<table style="width:auto">
+
+    <tr>
+        <td>First name: </td>
+        <td>Last name: </td>
+    </tr>
+    <tr>
+        <td> <input type="text" id="fname" name="fname" placeholder="Enter your firstname"></td>
+        <td> <input type="text" id="lname" name="lname" placeholder="Enter your lastname"></td>
+    </tr>
+
+    <tr>
+        <td>Username: </td>
+        <td> <input type="text" id="username" name="username"></td>
+    </tr>
+
+    <tr>
+        <td>Password: </td>
+        <td> <input type="text" id="password" name="password"></td>
+    </tr>
+    
+
+    <tr>
+        <td>Date of birth: </td>
+        <td> <input type="date"  id="dob" name="dob" value="dd-----yyyy"></td>
+    </tr>
+
+
+    <tr>
+        <td>Place of birth: </td>
+        <td> <input type="text"  id="pob" name="pob"></td>
+    </tr>
+
+
+    <tr>
+        <td>Gender: </td>
+        <td><input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="Other">
+            <label for="other">Other</label><br>
+
+        </td>
+
+    </tr>
+
+    <tr>
+        <td>Email: </td>
+        <td> <input type="text" id="email" name="email"></td>
+    </tr>
+
+    <tr>
+        <td>Phone: </td>
+        <td> <input type="text" id="phone" name="phone"></td>
+    </tr>
+
+
+    <tr>
+        <td>Hair color: </td>
+        <td><input type="color" id="hcolor" name="hcolor" ></td>
+    </tr>
+
+    <tr>
+        <td>Notes: </td>
+    </tr>
+    
+    <tr>
+        <td><textarea id="freeform" name="freeform" rows="10" cols="50"></textarea></td>
+
+    </tr>
+    
+    <tr>
+        <td>
+            <input type="checkbox" id="notifications" name="notifications" value="notifications">
+            <label for="notifications">Receive notifications</label><br>
+        </td>
+    </tr>
+
+
+    <tr>
+        <td></td>
+        <td>
+            <button type="register">Register</button>
+        </td>
+    </tr>
+
+
+
+   
+
+
+
+
+
+
+
+
+
+</table>
+</form>
+
+</body>
+</html>

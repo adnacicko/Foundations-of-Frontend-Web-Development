@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>burch</title>
+<title>Burch</title>
 </head>
 <body>
 <div style="text-align: center">
 
     <img src="./ibu.png" alt="International Burch University" width="150" height="50" style="vertical-align:middle">
     <h2>International Burch University</h2>
-</div>    
+</div>  
 <h1>Login page</h1>
 <p>Welcome.<br>Please Login</p>
 
 <form action="/action_page.php">
+    
     <label for="mail"><b>Email</b></label><br>
     <input type="text" id="mail" name="mail" value="Enter your email"><br><br>
     <label for="pass"><b>Password</b></label><br>
     <input type="text" id="pass" name="pass" value="Enter your password"><br><br>
-    <p>Don't have an account? <a href="stranica_registration.html">Register NOW</a><br><br></p>
-    <p2>Forgot your password?<br><br></p2>
+    <p>Don't have an account?<a href=stranica_registration.html>Register NOW</a></p>
+    <p2><a href=forget_pasword.html>Forgot your password?</a><br><br></p2>
+</form>
+
+<form method="POST" action="homepage.html">
     <input type="submit" value="SUBMIT">
 </form>
+
 </body>
 </html>
