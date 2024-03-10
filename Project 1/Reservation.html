@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>R E S E R V A T I O N</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+
+<section id="reservation">
+    <div style="text-align:center">
+        <h2 style="color: #355E3B;">R E S E R V A T I O N</h2>
+        <p>Make a reservation, be our guest!</p>
+    </div>
+    
+    <br><br><br>
+
+    <div style="text-align:center">
+        <form action="/action_page.php">
+            
+            <label for="fname"><b>First name: </b></label><br><br>
+            <input type="text" id="fname" name="fname" placeholder="Enter your first name" required><br><br><br>
+
+            <label for="lname"><b>Last name: </b></label><br><br>
+            <input type="text" id="lname" name="lname" placeholder="Enter your last name" required><br><br><br>
+
+            <label for="email"><b>Email: </b></label><br><br>
+            <input type="email" id="email" name="email" placeholder="user@email.com" required><br><br><br>
+
+            <label for="date"><b>Date: </b></label><br><br>
+            <input type="date" id="date" name="date" value="dd/mm/yyyy" required><br><br><br>
+
+            <label for="time"><b>Time: </b></label><br><br>
+            <input type="time" id="time" name="time" min="09:00" max="23:00" required><br><br><br>
+        
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</section>
+
+
