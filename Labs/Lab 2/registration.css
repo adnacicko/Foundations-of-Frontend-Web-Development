@@ -1,0 +1,44 @@
+
+body {
+    background-color: #85AFD4;
+    font-family: "Lato", sans-serif;
+    color: white;
+    
+}
+
+h1, h2 {
+    font-weight: bold;
+}
+
+p, a {
+    font-weight: normal;
+}
+
+a {
+    font-weight: bold;
+}
+
+button, input[type="submit"]{
+    background-color: #E47272;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    text-decoration-color: white;
+    border-radius: 20px;
+    
+}
+
+form {
+    width: 50%;  
+    margin: auto;
+    text-align: left; 
+}
+
+
+body > * {
+    padding: 10px;
+}

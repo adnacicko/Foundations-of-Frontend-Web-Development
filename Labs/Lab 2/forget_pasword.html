@@ -2,6 +2,8 @@
 <html>
 <head>
 <title>Forgot Password</title>
+<link rel="stylesheet" type="text/css" href="fp.css"> 
+<link rel="stylesheet" href="https://fonts.google.com/?query=lato">
 </head>
 <body>
 <div style="text-align: center">
@@ -16,12 +18,12 @@
     <label for="pass"><b>New password</b></label><br>
     <input type="text" id="pass" name="pass" value="Enter your password"><br><br><br>
     <input type="text" id="pass" name="pass" value="Repeat the password"><br><br><br>
-    <p2><a href=stranica_login.html><B>CREATE NEW PASSWORD</B></a><br><br></p2>
 
-    
- 
 </form>
 
+<form method="POST" action="stranica_login.html">
+    <input type="submit" value="CREATE NEW PASSWORD">
+</form>
 
 </body>
 </html>

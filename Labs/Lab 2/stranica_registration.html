@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Registration Page</title>
+    <title>Registration Page</title>
+<link rel="stylesheet" type="text/css" href="registration.css"> 
+<link rel="stylesheet" href="https://fonts.google.com/?query=lato">
 </head>
 <body>
 <div style="text-align: center">
@@ -9,14 +11,19 @@
     <h2>International Burch University</h2>
 </div>
 
-<h1>REGISTRATION FORM</h1>
+
 <form action="/action_page.php">
 <table style="width:auto">
+
+    <tr>
+        <td colspan="2"><h2>REGISTRATION FORM</h2></td>
+    </tr>
 
     <tr>
         <td>First name: </td>
         <td>Last name: </td>
     </tr>
+
     <tr>
         <td> <input type="text" id="fname" name="fname" placeholder="Enter your firstname"></td>
         <td> <input type="text" id="lname" name="lname" placeholder="Enter your lastname"></td>
@@ -35,8 +42,10 @@
 
     <tr>
         <td>Date of birth: </td>
-        <td> <input type="date"  id="dob" name="dob" value="dd-----yyyy"></td>
+        <td> <input type="date"  id="dob" name="dob" value="dd-----yyyy&#128197"></td>
     </tr>
+
+    <br><br>
 
 
     <tr>
@@ -79,7 +88,7 @@
     </tr>
     
     <tr>
-        <td><textarea id="freeform" name="freeform" rows="10" cols="50"></textarea></td>
+        <td colspan="2"><textarea type="text" id="notes" name="notes" rows="10" cols="50"></textarea></td>
 
     </tr>
     
@@ -93,20 +102,11 @@
 
     <tr>
         <td></td>
-        <td>
+        <td colspan="2" align="right">
             <button type="register">Register</button>
         </td>
+        
     </tr>
-
-
-
-   
-
-
-
-
-
-
 
 
 

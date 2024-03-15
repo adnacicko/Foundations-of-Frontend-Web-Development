@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 50px 100px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    align-items: center;
+    padding: 20px;
+    font-size: 30px;
+          
+  }
+  
+  header {
+    background-color:   #ffd9b3;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    height: max-content;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  
+  h1 {
+      font-size: 120px;
+      color: #333;
+      font-weight: normal;
+      margin-top: 180px;
+      text-align: center;
+  }
+  
+  table {
+      height: 100%;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+  }
+  
+  .tab {
+    background-color: #ffffcc;
+  }
+  
+  td img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    footer {
+      background-color: #ffd9b3;
+      text-align: center;
+    }
+  
+    footer p {
+      display: block;
+      word-wrap: break-word;
+      height: max-content;
+      margin: 0;
+      color: #000;
+      }
+  
