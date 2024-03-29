@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>E T N A</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="Home1.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,117 +16,569 @@
 </head>
 
 <body>
+    <header>
 
-    <section class="header">
-        <nav>
-            <img src="logoslika.jpg" alt="Restaurant Logo">
-            <div class="nav-links" id="nav-links">
-                <i class="fa fa-times"></i>
-                <ul>
-                    <li><a href="Home1.html">HOME</a></li>
-                    <li><a href="Menu.html">MENU</a></li>
-                    <li><a href="Reservation.html">RESERVATION</a></li>
-                    <li><a href="Contact.html">CONTACT</a></li>
+    
+
+    <nav class="navbar navbar-expand-lg shadow py-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/ETNA logo.png" alt="Restaurant Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="Home1.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Menu.html">MENU</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#aboutus">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Reservation">RESERVATION</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Chefs">OUR CHEFS</a>
+                    </li>
                 </ul>
-            </div>
-            <i class="fa fa-bars"></i>
-        </nav>
+                <button type="submit" class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#myModal">Contact Us</button>
+                <div class="modal modal-color" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            
+                            <div class="modal-header">
+                              <h4 class="modal-title">Contact Us: </h4>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
         
-        <div class="text-box">
-            <h1>Welcome to our Restaurant ETNA !</h1>
-            <p>Welcome to E T N A, place of elegance and delicious tastes!<br>
-               Discover the epitome of sophistication and culinary delight.<br>
-               Nestled in the heart of Sarajevo, our restaurant offers a haven of refined taste and timeless elegance.
-            </p>
+                            <div class="modal-body">
+                                <div class="container-fluid p-0">
+                                    <form class="was-validated">
+                                        <div class="row mb-3">
+                                            <div class="col-md-6 col-12">
+                                                <div class="input-group">
+                                                    <label for="firstName">First Name: </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" id="firstName" required>
+                                                    <div class="valid-feedback">Looks good!</div>
+                                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row mb-3">
+                                            <div class="col-md-6 col-12">
+                                                <div class="input-group">
+                                                    <label for="lastName">Last Name: </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" id="lastName" required>
+                                                    <div class="valid-feedback"></div>
+                                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                              
+                                        <div class="row mb-3">
+                                            <div class="col-md-6 col-12">
+                                                <div class="input-group">
+                                                    <label for="mail">Email: </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <div class="input-group">
+                                                    <input type="email" class="form-control" id="mail" required>
+                                                    <div class="valid-feedback"></div>
+                                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                
+                                        <div class="row mb-3">
+                                            <div class="col-md-6 col-12">
+                                                <div class="input-group">
+                                                    <label for="phone">Phone: </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <div class="input-group">
+                                                    <input type="tel" class="form-control" id="phone" required>
+                                                    <div class="valid-feedback"></div>
+                                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                
+                                
+                                        <div class="row mb-3">
+                                            <div class="col-md-6 col-12">
+                                                <div class="input-group">
+                                                    <label for="description">Message: </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <div class="input-group">
+                                                    <textarea class="form-control" name="description" rows="6" required></textarea>
+                                                    <div class="valid-feedback"></div>
+                                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                
+                
+                                        <div class="modal-footer">
+                                            <button type="submit" class="btn btn-brand" data-bs-dismiss="modal">Submit</button>  
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </nav>
 
-    </section>
+    
+</header>
 
-    <section class="aboutus">
-        <h1>About Us</h1>
-        <p>From savory appetizers to indulgent main courses and delectable desserts, our menu showcases a diverse array 
-            of dishes crafted with the finest ingredients and inspired by both local traditions and global influences.
-            Whether you're seeking an intimate dinner for two, a celebratory gathering with friends, 
-            or a casual meal with family, our welcoming ambiance and attentive staff ensure that every visit is a culinary journey 
-            to savor.<br>
-            Join us at E T N A and indulge in a gastronomic adventure unlike any other.
-        </p>
+    <div id="SlideOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active slide-1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <h6>WELCOME TO OUR RESTAURANT ETNA !</h6>
+                            <h1 class="display-1">Place of elegance and delicious tastes!</h1>
+                            <button type="submit" class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#Modalmodal">Book Table</button>
+                            <div class="modal modal-color" id="Modalmodal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Reservation Form: </h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        
+                                        <div class="modal-body">
+                                            <div class="container-fluid p-0">
+                                                <form class="was-validated">
 
-        <div class="row">
-            <div class="col">
-                <h3>We are waiting for you</h3>
-                <a href="Home.html"><img src="prva.png" alt="Welcome" width="300" height="auto"></a>
+                                                    <div class="row mb-3">
+                                                        <div class="col-md-6 col-12">
+                                                            <div class="input-group">
+                                                                <label for="firstName">First Name: </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-12">
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control" id="firstName" required>
+                                                                <div class="valid-feedback">Looks good!</div>
+                                                                <div class="invalid-feedback">Please fill out this field.</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                        
+                                                    <div class="row mb-3">
+                                                        <div class="col-md-6 col-12">
+                                                            <div class="input-group">
+                                                                <label for="lastName">Last Name: </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-12">
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control" id="lastName" required>
+                                                                <div class="valid-feedback"></div>
+                                                                <div class="invalid-feedback">Please fill out this field.</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                              
+                                                    <div class="row mb-3">
+                                                        <div class="col-md-6 col-12">
+                                                            <div class="input-group">
+                                                                <label for="mail">Email: </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-12">
+                                                            <div class="input-group">
+                                                                <input type="email" class="form-control" id="mail" required>
+                                                                <div class="valid-feedback"></div>
+                                                                <div class="invalid-feedback">Please fill out this field.</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                
+                                                    <div class="row mb-3">
+                                                        <div class="col-md-6 col-12">
+                                                            <div class="input-group">
+                                                                <label for="phone">Phone: </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-12">
+                                                            <div class="input-group">
+                                                                <input type="tel" class="form-control" id="phone" required>
+                                                                <div class="valid-feedback"></div>
+                                                                <div class="invalid-feedback">Please fill out this field.</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                
+                                
+                                        
+                
+                
+                                                    <div class="modal-footer">
+                                                        <button type="submit" class="btn btn-brand" data-bs-dismiss="modal">Submit</button>  
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="col">
-                <h3>Time to visit</h3>
-                <a href="Reservation.html"><img src="druga.png" alt="Welcome" width="300" height="auto"></a>
+            <div class="carousel-item slide-2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <h6>WELCOME TO OUR RESTAURANT ETNA !</h6>
+                            <h1 class="display-2">Discover the epitome of sophistication and culinary delight!</h1>
+                            <button type="submit" class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#Modal">Book Table</button>
+                            <div class="modal modal-color" id="Modal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Reservation Form: </h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        
+                                        <div class="modal-body">
+                                            <div class="container-fluid p-0">
+                                                <form class="was-validated">
+
+                                                    <div class="row mb-3">
+                                                        <div class="col-md-6 col-12">
+                                                            <div class="input-group">
+                                                                <label for="firstName">First Name: </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-12">
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control" id="firstName" required>
+                                                                <div class="valid-feedback">Looks good!</div>
+                                                                <div class="invalid-feedback">Please fill out this field.</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                        
+                                                    <div class="row mb-3">
+                                                        <div class="col-md-6 col-12">
+                                                            <div class="input-group">
+                                                                <label for="lastName">Last Name: </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-12">
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control" id="lastName" required>
+                                                                <div class="valid-feedback"></div>
+                                                                <div class="invalid-feedback">Please fill out this field.</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                              
+                                                    <div class="row mb-3">
+                                                        <div class="col-md-6 col-12">
+                                                            <div class="input-group">
+                                                                <label for="mail">Email: </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-12">
+                                                            <div class="input-group">
+                                                                <input type="email" class="form-control" id="mail" required>
+                                                                <div class="valid-feedback"></div>
+                                                                <div class="invalid-feedback">Please fill out this field.</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                
+                                                    <div class="row mb-3">
+                                                        <div class="col-md-6 col-12">
+                                                            <div class="input-group">
+                                                                <label for="phone">Phone: </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-12">
+                                                            <div class="input-group">
+                                                                <input type="tel" class="form-control" id="phone" required>
+                                                                <div class="valid-feedback"></div>
+                                                                <div class="invalid-feedback">Please fill out this field.</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                
+                                
+                                        
+                
+                
+                                                    <div class="modal-footer">
+                                                        <button type="submit" class="btn btn-brand" data-bs-dismiss="modal">Submit</button>  
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            
+        </div>
+          
+    </div>
+    
 
-            <div class="col">
-                <h3>Check our Menu</h3>
-                <a href="Menu.html"><img src="treća.png" alt="Welcome" width="300" height="auto"></a>
+    <section class="aboutus" id="aboutus">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>About Us</h1>
+                    <p>From savory appetizers to indulgent main courses and delectable desserts, our menu showcases a diverse array 
+                        of dishes crafted with the finest ingredients and inspired by both local traditions and global influences.
+                        Whether you're seeking an intimate dinner for two, a celebratory gathering with friends, 
+                        or a casual meal with family, our welcoming ambiance and attentive staff ensure that every visit is a culinary journey 
+                        to savor.<br>Join us at E T N A and indulge in a gastronomic adventure unlike any other.
+                    </p>
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <div class="card">
+                               <h3>Be our guest</h3>
+                               <a href="Home1.html"><img class="img-fluid" src="images/prva.png" alt="Welcome" width="300" height="auto"></a>
+                            </div>
+                        </div>
+            
+                        <div class="col-12 col-md-4">
+                            <div class="card">
+                                <h3>Time to visit</h3>
+                                <a href="Reservation.html"><img class="img-fluid"  src="images/druga.png" alt="Welcome" width="300" height="auto"></a>
+                            </div>
+                        </div>
+            
+                        <div class="col-12 col-md-4">
+                            <div class="card">
+                                <h3>Check Menu</h3>
+                                <a href="Menu.html"><img class="img-fluid"  src="images/treća.png" alt="Welcome" width="300" height="auto"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-
         </div>
     </section>
 
     <section class="us">
-        <h1>What we offer you</h1>
-        <p>The restaurant offers a delectable selection of desserts alongside a menu featuring delicious and satisfying meals. 
-            Guests can also enjoy a variety of refreshing drinks to complement their dining experience.
-        </p>
-
-        <div class="row">
-            <div class="cols">
-                <img src="img1.png" alt="Drinks">
-                <div class="layer">
-                    <h3>DRINKS</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>What we offer you</h1>
+                    <p>The restaurant offers a delectable selection of desserts alongside a menu featuring delicious and satisfying meals. 
+                        Guests can also enjoy a variety of refreshing drinks to complement their dining experience.
+                    </p>
                 </div>
-            </div>
+            
 
-            <div class="cols">
-                <img src="img2.png" alt="Desserts">
-                <div class="layer">
-                    <h3>DESSERTS</h3>
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <div class="cards">
+                            <img src="images/img1.png" alt="Drinks">
+                            <div class="layer">
+                                <h3>DRINKS</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="cards">
+                            <img src="images/img2.png" alt="Desserts">
+                            <div class="layer">
+                                <h3>DESSERTS</h3>
+                            </div>
+                        </div>
+                    </div>
+                        
+                    <div class="col-12 col-md-4">
+                        <div class="cards">
+                            <img src="images/img3.png" alt="Food">
+                            <div class="layer">
+                                <h3>FOOD</h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </div> 
+        </div> 
+    </section>
 
-            <div class="cols">
-                <img src="img3.png" alt="Food">
-                <div class="layer">
-                    <h3>FOOD</h3>
+    <section class="reviews" class="bg-cover">
+        <div class="container">
+            <div class="row">
+                <div class="col-12" intro-text>
+                    <h1>What our guests said?</h1>
+                    <p>Read the reviews and realise why we are the best option - always!</p>
                 </div>
             </div>
         </div>
 
-    </section>
-
-
-
-
-
-
-
-    <section class="footer">
-        <p>2024 &copy; Restaurant E T N A. All rights reserved.</p>
-            <p><a href="info@etna.ba">info@etna.ba</a> |
-               <a href="Privacy policy and Legal Notice.html">Privacy Policy and Legal Notice</a>
-            </p>
-
-            <div class="icons">
-                <i class="fa fa-facebook"></i>
-                <i class="fa fa-instagram"></i>
+        <div id="carousel-reviews" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carousel-reviews" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carousel-reviews" data-bs-slide-to="1" aria-label="Slide 2"></button>
             </div>
-            <p>Made with <i class="fa fa-heart-o"></i> by Adna Čičko</p>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="review">
+                                <div class="quote">
+                                    <i class="fa fa-quote-left fa-4x"></i>
+                                    <p>The inviting ambiance and friendly service make this restaurant a fantastic spot.</p>
+                                </div>
+                                <div class="person">
+                                    <img src="./person/person1.jpg" alt="Catherine Paiz">
+                                    <h4>Catherine Paiz</h4>
+                                    <div class="stars">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="review">
+                                <div class="quote">
+                                    <i class="fa fa-quote-left fa-4x"></i>
+                                    <p>The attention to detail and fresh ingredients make this place stand out. It's a must-visit for anyone.</p>
+                                </div>
+                                <div class="person">
+                                    <img src="./person/person.jpg" alt="Lilly Abby">
+                                    <h4>Lilly Abby</h4>
+                                    <div class="stars">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+              
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-reviews" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel-reviews" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
     </section>
 
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row gy-5">
+                    <div class="col-lg-4">
+                        <img src="images/ETNA logo.png" alt="E T N A">
+                        <p>Check our social media and keep up with the news</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fa fa-facebook"></i></a> 
+                            <a href="#"><i class="fa fa-instagram"></i></a> 
+                            <a href="#"><i class="fa fa-youtube"></i></a> 
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="text-color">
+                            <h6>CONTACT</h6>
+                            <p>Phone: 033 323-033</p>
+                            <p>Email: info@etna.ba</p>
+                            <p>Address: Maršala Tita, 71000 Sarajevo</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="text-color">
+                            <h6>OPENING HOURS</h6>
+                            <p>Monday-Friday: 9:00 - 23:00</p>
+                            <p>Saturday - Sunday: 9:00 - 00:00</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-auto">
+                        <p>2024 &copy; Restaurant E T N A. All rights reserved.</p><br>
+                        
+                    </div>
+                </div>
+
+            
+
+            </div>
+        </div>
+    </footer>
+
+    
 
 
 
 
 
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 
 </body>
+</html>
+        
+    
