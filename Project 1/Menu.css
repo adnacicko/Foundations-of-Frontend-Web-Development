@@ -5,6 +5,9 @@
     font-family: "Playfair Display", serif;
 }
 
+/*------------------------------------------------*/
+
+/*HEADER*/
 .header{
     height: 500px;
 }
@@ -30,7 +33,9 @@ h1{
     font-weight: 600;
 }
 
+/*------------------------------------------------*/
 
+/*SECTION MENU*/
 .section{
     padding: 25px 0 25px 0;
     text-align: center;
@@ -83,7 +88,7 @@ h1{
     margin: 5px;
 }
   
-
+/*MEDIA - RESPONSIVE*/
 @media(max-width: 700px){
     .heading h1{
         font-size: 20px;
@@ -99,70 +104,70 @@ h1{
 }
 
 
+/*------------------------------------------------*/
 
-
-
-
-
-footer{
-    /*background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(images/reviews1.jpg);*/
+/*FOOTER*/
+footer {
     background-color: #720505;
     padding-top: 120px;
-    padding-bottom: 30px;
-    
+    padding-bottom: 30px;   
 }
 
+.row{
+    justify-content: center;
+}
 
-.text-color h6{
+.text-color h6 {
     color: #fff;
-    margin-bottom: 4px;
-    
-    
+    margin-bottom: 4px; 
 }
 
-.text-color p{
-    margin-bottom: 1px;
-    
+.text-color p {
+    margin-bottom: 1px;   
 }
 
-
-footer p{
+footer p {
     color: rgba(225, 225, 225, 0.75);
-
 }
 
-.footer-top{
+.footer-top {
     margin-bottom: 30px;
 }
 
-footer img{
+/*FOOTER - LOGO*/
+footer img {
     margin-bottom: 4px;
     max-width: 175px;
     width: 100px;
 }
 
-.social-links a{
+/*FOOTER - SOCIAL MEDIA ICONS*/
+.social-links a {
     color: #ffa200;
     font-weight: normal;
     font-size: 24px;
-    margin-right: 10px;
-    
-    
+    margin-right: 10px;  
 }
 
-.social-links a:hover{
+.social-links a:hover {
     color: #e77002;
 }
 
 .footer-bottom {
     padding-top: 30px;
 }
-.footer-bottom .row{
+
+.footer-bottom .row {
     justify-content: center;
 }
 
-.footer-bottom p{
+.footer-bottom p {
     margin-bottom: 0;
     padding-top: 30px;
     border-top: 1px solid rgba(225, 225, 225, 0.4);
 }
+
+
+
+
+
