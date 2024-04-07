@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Playfair Display", serif;;
+  }
+
+  /*HEADER*/
+.header{
+    height: 350px;
+}
+
+.imgg{
+    width: 100%;
+    height: 350px;
+    background-image: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)), url(photos/headerr.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.heading{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 200px;
+}
+
+h1{
+    color: #fff;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+  
+  /* The grid: Four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+  }
+  
+  /* Style the images inside the grid */
+  .column img {
+    opacity: 0.8; 
+    cursor: pointer; 
+    width: 100%;
+  }
+  
+  .column img:hover {
+    opacity: 1;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* The expanding image container */
+  .container {
+    position: relative;
+    display: none;
+  }
+  
+  /* Expanding image text */
+  #imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+  }
+  
+  /* Closable button inside the expanded image */
+  .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+  }
+
+
+  /*FOOTER*/
+ footer {
+    background-color: #720505;
+    padding-top: 120px;
+    padding-bottom: 30px;   
+ }
+
+ .row{
+    justify-content: center;
+ }
+
+ .text-color h6 {
+    color: #fff;
+    margin-bottom: 4px; 
+ }
+
+ .text-color p {
+    margin-bottom: 1px;   
+ }
+
+ footer p {
+    color: rgba(225, 225, 225, 0.75);
+ }
+
+ .footer-top {
+    margin-bottom: 30px;
+ }
+
+/*FOOTER - LOGO*/
+ footer img {
+    margin-bottom: 4px;
+    max-width: 175px;
+    width: 100px;
+ }
+
+/*FOOTER - SOCIAL MEDIA ICONS*/
+ .social-links a {
+    color: #ffa200;
+    font-weight: normal;
+    font-size: 24px;
+    margin-right: 10px;  
+ }
+
+ .social-links a:hover {
+    color: #e77002;
+ }
+
+ .footer-bottom {
+    padding-top: 30px;
+ }
+
+ .footer-bottom .row {
+    justify-content: center;
+ }
+
+ .footer-bottom p {
+    margin-bottom: 0;
+    padding-top: 30px;
+    border-top: 1px solid rgba(225, 225, 225, 0.4);
+ }
