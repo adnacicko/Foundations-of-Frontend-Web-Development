@@ -11315,3 +11315,68 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 
 
+#more1 {display: none;}
+#more2 {display: none;}
+#more3 {display: none;}
+#more4 {display: none;}
+
+.myBtn {
+  padding: 10px 30px;
+  border-radius: 50px;
+  border: 0;
+  background-color: #ffa200;
+  box-shadow: #0000000d 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 13px;
+  transition: all .5s ease;
+}
+
+.myBtn:hover {
+  letter-spacing: 3px;
+  background-color: #ffa200;
+  color: #fff;
+  box-shadow: #ffa200 0px 7px 29px 0px;
+}
+
+.myBtn:active {
+  letter-spacing: 3px;
+  background-color: #ffa200;
+  color: #fff;
+  box-shadow: #5d18dc 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
+
+
+
+/*BUTTON*/
+.btn1 {
+  border: 0;
+  padding: 14px 38px;
+}
+
+.btn-brand {
+  color: #fff;
+  font-weight: 500;
+  border-color: #ffa200;
+  background-color: #ffa200;
+}
+
+.btn-brand:hover {
+  border-color: #e77002;
+  background-color: #e77002;
+  color:#fff;
+}
+
+.btn-close {
+  background-color: #ffa200;
+}
+
+label {
+  color: #000;
+}
+
+.modal-header h4 {
+  color: #000;
+}
