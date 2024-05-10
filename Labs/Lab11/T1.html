@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Table</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .language-table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        .language-table th, .language-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .language-table th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $.ajax({
+                url: 'languages.json',
+                dataType: 'json',
+                success: function(data){
+                    buildTable(data);
+                },
+                error: function(){
+                    $('#tableContainer').text('Failed to retrieve data.');
+                }
+            });
+        });
+
+        function buildTable(data){
+            var table = $('<table>').addClass('language-table');
+            var header = $('<tr>').append(
+                $('<th>').text('Code'),
+                $('<th>').text('Name')
+            );
+            table.append(header);
+
+            $.each(data, function(index, language){
+                var row = $('<tr>').append(
+                    $('<td>').text(language.code),
+                    $('<td>').text(language.name)
+                );
+                table.append(row);
+            });
+
+            $('#tableContainer').append(table);
+        }
+    </script>
+</head>
+<body>
+    <div id="tableContainer"></div>
+</body>
+</html>

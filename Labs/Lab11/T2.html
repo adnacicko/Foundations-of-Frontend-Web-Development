@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Address Information</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>IP Address Information</h1>
+    <div id="ip-info">
+        <p>Loading...</p>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            //IP address information
+            $.ajax({
+                url: "https://ipapi.co/json/",
+                type: "GET",
+                dataType: "json",
+                success: function(data) {
+                    //HTML table dynamically
+                    var table = "<table border='1'>";
+                    table += "<tr><th>Property</th><th>Value</th></tr>";
+                    table += "<tr><td>IP Address</td><td>" + data.ip + "</td></tr>";
+                    table += "<tr><td>City</td><td>" + data.city + "</td></tr>";
+                    table += "<tr><td>Region</td><td>" + data.region + "</td></tr>";
+                    table += "<tr><td>Country</td><td>" + data.country_name + "</td></tr>";
+                    table += "<tr><td>Latitude</td><td>" + data.latitude + "</td></tr>";
+                    table += "<tr><td>Longitude</td><td>" + data.longitude + "</td></tr>";
+                    table += "</table>";
+
+                    //Display the table
+                    $("#ip-info").html(table);
+                },
+                error: function(xhr, status, error) {
+                    $("#ip-info").html("<p>Error fetching IP address information.</p>");
+                    console.error(status, error);
+                }
+            });
+        });
+    </script>
+
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+
+        }
+
+    </style>
+</body>
+</html>
