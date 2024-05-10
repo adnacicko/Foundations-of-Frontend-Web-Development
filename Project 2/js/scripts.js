@@ -55,55 +55,9 @@ window.addEventListener('DOMContentLoaded', event => {
 
 
 
-function myFunction(dotsId, moreId, btnId) {
-    var dots = document.getElementById(dotsId);
-    var moreText = document.getElementById(moreId);
-    //var btnText = document.getElementById(btnId);
-  
-    if (dots.style.display === "none" || dots.style.display === "") {
-        dots.style.display = "inline";
-        moreText.style.display = "none";
-    } else {
-        dots.style.display = "none";
-        moreText.style.display = "inline";
-    }
-}
 
 
 
-$('#myForm').validate({
-    rules: {
-        firstname: 'required',
-        lastName: 'required',
-        email: {
-            required: true,
-            email: true
-        },
-        phone: 'required',
-        date: 'required',
-        time: 'required',
-        options: 'required',
-        options2: 'required'
-    },
-    
-    messages: {
-        firstname: 'Please enter your first name',
-        lastName: 'Please enter your last name',
-        email:{
-            required: 'Please enter your email',
-            email: 'Please enter valid email'
-        },
-        phone: 'Please enter your phone number',
-        date: 'Please enter date of reseravtion',
-        time: 'Please enter time of reseravtion',
-        options: 'Choose number of guests',
-        options2: 'Choose occasion'
-    },
 
-    //submitHandler: function(form) {
-        //try{
-            //$.blockUI({ message: <h3>Processing</h3>})
-        //},
-    //}
-})
+
 
