@@ -1,0 +1,23 @@
+[
+    {
+        "title": "Live Music Night",
+        "start": "2024-05-20T20:00:00",
+        "end": "2024-05-20T22:00:00",
+        "location": "Restaurant E T N A",
+        "description": "Enjoy live music performances by local artists."
+    },
+    {
+        "title": "Wine Tasting Event",
+        "start": "2024-05-25T18:00:00",
+        "end": "2024-05-25T20:00:00",
+        "location": "Restaurant E T N A",
+        "description": "Experience a variety of exquisite wines from around the world."
+    },
+    {
+        "title": "Chef's Special Menu",
+        "start": "2024-06-01T00:00:00",
+        "end": "2024-06-02T00:00:00",
+        "location": "Restaurant E T N A",
+        "description": "Indulge in a special menu curated by our talented chefs."
+    }
+]

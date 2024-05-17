@@ -54,10 +54,56 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 
+function myFunction(dotsId, moreId, btnId) {
+    var dots = document.getElementById(dotsId);
+    var moreText = document.getElementById(moreId);
+    //var btnText = document.getElementById(btnId);
+
+    if (dots.style.display === "none" || dots.style.display === "") {
+        dots.style.display = "inline";
+        moreText.style.display = "none";
+    } else {
+        dots.style.display = "none";
+        moreText.style.display = "inline";
+    }
+}
+
+function myyFunction() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+
+   
+    
+}
 
 
 
 
 
 
+$(document).ready(function() {
+    const eventsFile = './events.json';
 
+   
+    $.getJSON(eventsFile, function(data) {
+       
+        initializeCalendar(data);
+    });
+});
+
+function initializeCalendar(events) {
+    const calendarOptions = {
+    };
+
+   
+    $('#calendar').fullCalendar(calendarOptions);
+
+    
+    events.forEach(function(event) {
+        $('#calendar').fullCalendar('renderEvent', {
+            title: event.title,
+            start: event.start,
+            end: event.end,
+        }, true);
+    });
+}

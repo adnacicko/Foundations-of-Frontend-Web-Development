@@ -15,6 +15,20 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+        <!-- Include FullCalendar library -->
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css' rel='stylesheet' />
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js'></script>
+
+        <!--JS -->
+        <script src="js/scripts.js"></script>
+
+        
+        
     </head>
 
     <body id="page-top">
@@ -42,9 +56,23 @@
             <div class="container">
                 <div class="masthead-subheading">Welcome To Our Restaurant!</div>
                 <div class="masthead-heading text-uppercase">Place of elegance and delicious tastes!</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="#about">Tell Me More</a>
+                <a class="btn btn-primary btn-xl text-uppercase" href="htmls/forms.html">Book a Table</a>
             </div>
         </header>
+
+        <br>
+        <br>
+
+        <!--Theme Switcher-->
+        <div class="theme">
+            <p>Switch theme</p>
+            
+            <label class="switch">
+                <input type="checkbox">
+                <span onclick="myyFunction()" class="slider round"></span>
+            </label>
+        </div>
+
         <!-- Services-->
         <section class="page-section" id="about">
             <div class="container">
@@ -90,7 +118,7 @@
             </div>
         </section>
         <!-- Gallery Grid-->
-        <section class="page-section bg-light" id="portfolio">
+        <section class="page-section" id="portfolio">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Gallery</h2>
@@ -210,8 +238,14 @@
                                 <h4>2019-2023</h4>
                                 <h4 class="subheading">Our Humble Beginnings</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">Nestled in the heart of the city, E T N A began its journey as a humble dream. Inspired by the fiery spirit of Mount Etna, our founders envisioned a restaurant that would erupt with flavor, warmth, and hospitality.</p></div>
-
+                            <div class="timeline-body"><p class="text-muted">Nestled in the heart of the city, 
+                                E T N A began its journey as a humble dream. Inspired by the fiery spirit of Mount Etna, 
+                                our founders envisioned a restaurant that would erupt with flavor, warmth, 
+                                and hospitality. <span id="dots1">...</span><span id="more1">In the early days, 
+                                    the aroma of Sicilian spices filled the air as the kitchen buzzed with excitement. 
+                                    With dedication and a dash of creativity, our chefs crafted dishes that paid homage to the rich 
+                                    culinary heritage of Italy's sun-kissed island.</span></p>
+                                    <button onclick="myFunction('dots1', 'more1')" class="myBtn">Read more</button></div>
                             
                             
 
@@ -228,7 +262,16 @@
                                 <h4>March 2024</h4>
                                 <h4 class="subheading">A Restaurant is Born</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">In the bustling streets of our city, amidst the whispers of culinary dreams, a new star emerges on the gastronomic horizon. Like a phoenix rising from the flames, a restaurant is born, its name whispered with anticipation: E T N A.</p></div>
+                            <div class="timeline-body"><p class="text-muted">In the bustling streets of our city, 
+                                amidst the whispers of culinary dreams, a new star emerges on the gastronomic horizon. 
+                                Like a phoenix rising from the flames, a restaurant is born, 
+                                its name whispered with anticipation: E T N A. <span id="dots2">...</span><span id="more2">Behind the scenes, chefs weave their magic, 
+                                    infusing each dish with creativity and tradition. 
+                                    From the sizzle of pans to the gentle stir of sauces, 
+                                    a symphony of flavors dances in the kitchen, 
+                                    eager to tantalize taste buds and ignite senses.</span></p>
+                                    <button onclick="myFunction('dots2', 'more2')" class="myBtn">Read more</button>
+                            </div>
                         </div>
                     </li>
                     <li>
@@ -238,7 +281,15 @@
                                 <h4>2024</h4>
                                 <h4 class="subheading">Our Mission</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">At E T N A, our mission is more than just serving exceptional food—it's about creating memorable experiences infused with passion, authenticity, and a deep commitment to our guests and community.</p></div>
+                            <div class="timeline-body"><p class="text-muted">At E T N A, our mission is more than just serving exceptional 
+                                food—it's about creating memorable experiences infused with passion, 
+                                authenticity, and a deep commitment to our guests and community. <span id="dots3">...</span><span id="more3">Our journey 
+                                    began with a simple yet powerful vision: to ignite the senses and inspire the palate through 
+                                    the art of Italian cuisine. But our mission goes beyond the plate. 
+                                    It's about fostering connections, sparking joy, 
+                                    and nurturing moments of shared happiness around the table.</span></p>
+                                    <button onclick="myFunction('dots3', 'more3')" class="myBtn">Read more</button>
+                            </div>                        
                         </div>
                     </li>
                     <li class="timeline-inverted">
@@ -249,7 +300,67 @@
                                 <h4 class="subheading">Frequently Asked Questions</h4>
                             </div>
                             <div class="timeline-body"><p class="text-muted">Find quick answers to common queries about our restaurant, from reservation policies to dietary accommodations, in our FAQ section.</p></div>
+                            <div class="timeline-body"><p class="text-muted">Find quick answers to common queries about our restaurant, 
+                                from reservation policies to dietary accommodations, 
+                                in our FAQ section.</p>
+                            </div>
+                            <br>
+
+                            <!-- FAQ -->
+                            <div class="accordion mb-5" id="accordionExample1">
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">1. What is the dress code at E T N A?</button></h3>
+                                    <div class="accordion-collapse collapse show" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            At E T N A, we encourage smart casual attire to enhance the dining experience, but we welcome guests to dress comfortably according to their preference.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header" id="headingTwo"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">2. Do you offer vegetarian or vegan options?</button></h3>
+                                    <div class="accordion-collapse collapse" id="collapseTwo" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Yes, we pride ourselves on offering a diverse menu that includes delicious vegetarian and vegan dishes, crafted with the same care and attention to flavor as our other offerings.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header" id="headingThree"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">3. Can I make a reservation online?</button></h3>
+                                    <div class="accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Absolutely! You can easily make a reservation through our website booking system or by giving us a call. We look forward to hosting you!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header" id="headingFour"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">4. Are you able to accommodate dietary restrictions or food allergies?</button></h3>
+                                    <div class="accordion-collapse collapse" id="collapseFour" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Of course! Please inform us of any dietary restrictions or allergies when making your reservation or upon arrival, and our attentive staff will ensure your dining experience is both safe and enjoyable.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header" id="headingFive"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">5. Is parking available near the restaurant?</button></h3>
+                                    <div class="accordion-collapse collapse" id="collapseFive" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Yes, we provide convenient parking options for our guests. Feel free to inquire about parking details when making your reservation or upon arrival.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header" id="headingSix"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">6. What are your operating hours?</button></h3>
+                                    <div class="accordion-collapse collapse" id="collapseSix" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            We are open everyday from 9 AM to 11PM. Please note that our hours may vary on holidays or special occasions, so we recommend checking our website or contacting us directly for the most up-to-date information.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
+                    </li>
+
                     </li>
                     <li class="timeline-inverted">
                         <div class="timeline-image">
@@ -266,7 +377,7 @@
             </div>
         </section>
         <!-- Team-->
-        <section class="page-section bg-light" id="team">
+        <section class="page-section" id="team">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
@@ -309,6 +420,17 @@
                 </div>
             </div>
         </section>
+
+       <!-- Events Calendar-->
+        <div class="calendar">
+            <h2>Events Calendar</h2>
+            <div id="calendar"></div>
+        </div>
+        
+            
+    
+        
+
         <!-- Clients-->
         <div class="py-5">
             <div class="container">
@@ -328,6 +450,7 @@
                 </div>
             </div>
         </div>
+
 
         
         <!-- Contact-->
@@ -394,6 +517,7 @@
                 </form>
             </div>
         </section>
+
         <!-- Footer-->
         <footer class="footer py-4">
             <div class="container">
