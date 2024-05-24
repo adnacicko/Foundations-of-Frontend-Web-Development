@@ -107,3 +107,5 @@ function initializeCalendar(events) {
         }, true);
     });
 }
+
+

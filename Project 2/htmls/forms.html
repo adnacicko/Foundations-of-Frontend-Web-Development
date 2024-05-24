@@ -49,7 +49,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Gallery</a></li>
                         <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
@@ -162,14 +162,30 @@
                           
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary">Submit</button>
+
+                            
                         </div>
                         
                         
                     </form>
+
+                    
                     
                 </div>
             </div>
-        </div> 
+        </div>
+
+        <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
+            <!-- Ostatak vaše forme -->
+            <a href="details.html">View Details</a>
+
+        </div>
+        
+      
+
+    
+        
+       
     
     </body>
     
@@ -236,8 +252,41 @@
 
             
         }
+
+
+
         
     });
+
+    
+        // Funkcija koja se poziva kada korisnik klikne na "Submit"
+        function submitForm() {
+            // Pohrani podatke iz forme u lokalnu pohranu
+            localStorage.setItem('reservationData', JSON.stringify({
+                fname: document.getElementById('fname').value,
+                lname: document.getElementById('lname').value,
+                email: document.getElementById('email').value,
+                // Dodajte ovdje ostale podatke iz forme koje želite pohraniti
+            }));
+
+            // Preusmjeri korisnika na stranicu "details.html"
+            window.location.href = 'details.html';
+        }
+
+        // Dodajte event listener za submit forme
+        document.getElementById('reservationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Spriječava slanje forme
+            submitForm(); // Poziva funkciju za pohranu podataka i preusmjeravanje
+        });
+    
+
+
+
+  
+
+
+
+
     
 
     
