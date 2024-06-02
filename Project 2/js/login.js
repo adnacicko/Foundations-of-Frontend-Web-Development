@@ -2,7 +2,7 @@ let UserService = {
     init: function () {
         let token = localStorage.getItem("user");
         if (token) {
-            window.location.replace("index.html");
+            window.location.replace("../index.html");
         }
 
         $("#login-form").validate({
@@ -15,7 +15,7 @@ let UserService = {
 
     login: function (user) {
         $.ajax({
-            url: 'login.json',
+            url: '../login.json',
             type: 'GET',
             dataType: 'json',
             success: function (data) {
@@ -23,7 +23,7 @@ let UserService = {
                 if (validUser) {
                     delete validUser.password;
                     localStorage.setItem("user", JSON.stringify(validUser));
-                    window.location.replace("index.html");
+                    window.location.replace("../index.html");
                 } else {
                     toastr.error('Invalid credentials');
                 }
@@ -37,7 +37,7 @@ let UserService = {
 
     logout: function () {
         localStorage.clear();
-        window.location.replace("login.html");
+        window.location.replace("htmls/login.html");
     }
 };
 

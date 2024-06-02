@@ -47,7 +47,7 @@
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Gallery</a></li>
                         <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="login.html">Lo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="htmls/login.html">Login</a></li>
                     </ul>
                 </div>
             </div>
@@ -118,6 +118,7 @@
                 </div>
             </div>
         </section>
+
         <!-- Gallery Grid-->
         <section class="page-section" id="portfolio">
             <div class="container">
@@ -224,6 +225,7 @@
                 </div>
             </div>
         </section>
+
         <!-- About-->
         <section class="page-section" id="about">
             <div class="container">
@@ -377,6 +379,7 @@
                 </ul>
             </div>
         </section>
+
         <!-- Team-->
         <section class="page-section" id="team">
             <div class="container">
@@ -424,14 +427,47 @@
 
        <!-- Events Calendar-->
         <div class="calendar">
-            <h2>Events Calendar</h2>
+            <h2 class="c">Events Calendar</h2>
             <div id="calendar"></div>
         </div>
         
-            
+        <!--Reviews-->
+        <div class="container mt-5">
+            <h2 class="h">Reviews</h2>
+            <div id="reviewList">
+                <!-- Dynamically generated reviews will go here -->
+            </div>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#writeReviewModal">Add Review</button>
+        </div>
     
-        
-
+        <!-- Modal for writing a review -->
+        <div class="modal fade" id="writeReviewModal" tabindex="-1" aria-labelledby="writeReviewModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="writeReviewModalLabel">Write a Review</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="reviewerName" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="reviewerName" placeholder="Enter your name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="reviewText" class="form-label">Your Review</label>
+                                <textarea class="form-control" id="reviewText" rows="3" placeholder="Write your review here"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button id="saveChangesButton" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
         <!-- Clients-->
         <div class="py-5">
             <div class="container">
@@ -452,8 +488,6 @@
             </div>
         </div>
 
-
-        
         <!-- Contact-->
         <section class="page-section" id="contact">
             <div class="container">
@@ -461,13 +495,7 @@
                     <h2 class="section-heading text-uppercase">Contact Us</h2>
                     <h3 class="section-subheading text-muted">For any question, be free to contact</h3>
                 </div>
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- * * SB Forms Contact Form * *-->
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- This form is pre-integrated with SB Forms.-->
-                <!-- To make this form functional, sign up at-->
-                <!-- https://startbootstrap.com/solution/contact-forms-->
-                <!-- to get an API token!-->
+                
                 <form id="contactForm" data-sb-form-api-token="API_TOKEN">
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6">
@@ -496,10 +524,8 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- Submit success message-->
-                    <!---->
-                    <!-- This is what your users will see when the form-->
-                    <!-- has successfully submitted-->
                     <div class="d-none" id="submitSuccessMessage">
                         <div class="text-center text-white mb-3">
                             <div class="fw-bolder">Form submission successful!</div>
@@ -508,10 +534,8 @@
                             <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
                         </div>
                     </div>
+
                     <!-- Submit error message-->
-                    <!---->
-                    <!-- This is what your users will see when there is-->
-                    <!-- an error submitting the form-->
                     <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                     <!-- Submit Button-->
                     <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Send Message</button></div>
@@ -536,6 +560,7 @@
                 </div>
             </div>
         </footer>
+
         <!-- Portfolio Modals-->
         <!-- Portfolio item 1 modal popup-->
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
@@ -747,14 +772,11 @@
                 </div>
             </div>
         </div>
+
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>

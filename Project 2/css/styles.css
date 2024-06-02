@@ -11467,5 +11467,50 @@ input:checked + .slider:before {
   background-color: #f9f9f9;
 }
 
+#reviewList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Razmak između recenzija */
+}
 
+#reviewList > div {
+  flex: 1 1 calc(33.333% - 16px); /* Širina svake recenzije uzimajući u obzir razmak */
+  box-sizing: border-box; /* Osigurava da padding i border ne povećavaju širinu elementa */
+  border: 1px solid #ddd; /* Okvir oko svake recenzije */
+  padding: 16px; /* Unutrašnji razmak */
+  background-color: #f9f9f9; /* Pozadinska boja */
+  border-radius: 4px; /* Zaobljeni uglovi */
+}
 
+@media (max-width: 768px) {
+  #reviewList > div {
+      flex: 1 1 calc(50% - 16px); /* Dve kolone za manje ekrane */
+  }
+}
+
+@media (max-width: 480px) {
+  #reviewList > div {
+      flex: 1 1 100%; /* one col for small screens */
+  }
+}
+
+.h {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.c {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+#reservationDetails {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.hh {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}

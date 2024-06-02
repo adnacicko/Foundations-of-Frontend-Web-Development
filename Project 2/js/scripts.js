@@ -1,12 +1,3 @@
-/*!
-* Start Bootstrap - Agency v7.0.12 (https://startbootstrap.com/theme/agency)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-agency/blob/master/LICENSE)
-*/
-//
-// Scripts
-// 
-
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
@@ -54,10 +45,11 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 
+//Read More
 function myFunction(dotsId, moreId, btnId) {
     var dots = document.getElementById(dotsId);
     var moreText = document.getElementById(moreId);
-    //var btnText = document.getElementById(btnId);
+    
 
     if (dots.style.display === "none" || dots.style.display === "") {
         dots.style.display = "inline";
@@ -68,19 +60,15 @@ function myFunction(dotsId, moreId, btnId) {
     }
 }
 
+
+//Theme Switcher
 function myyFunction() {
     var element = document.body;
-    element.classList.toggle("dark-mode");
-
-   
-    
+    element.classList.toggle("dark-mode");  
 }
 
 
-
-
-
-
+//Events
 $(document).ready(function() {
     const eventsFile = './events.json';
 
@@ -107,5 +95,78 @@ function initializeCalendar(events) {
         }, true);
     });
 }
+
+
+//Reviews
+$(document).ready(function() {
+    let reviews = [];
+    let editIndex = -1;
+
+    //Loading data from JSON file
+    $.getJSON('reviews.json', function(data) {
+        reviews = data;
+        displayReviews();
+    });
+
+    //Show reviews
+    function displayReviews() {
+        const reviewList = $('#reviewList');
+        reviewList.empty();
+
+        reviews.forEach((review, index) => {
+            reviewList.append(`
+                <div class="review" data-index="${index}">
+                    <p><strong>${review.name}</strong></p>
+                    <p>${review.text}</p>
+                    <button class="btn btn-secondary edit-btn" data-index="${index}">Edit</button>
+                    <button class="btn btn-danger delete-btn" data-index="${index}">Delete</button>
+                </div>
+            `);
+        });
+    }
+
+    //Save changes
+    $('#saveChangesButton').click(function() {
+        const reviewerName = $('#reviewerName').val();
+        const reviewText = $('#reviewText').val();
+
+        if (editIndex === -1) {
+            const newReview = {
+                id: reviews.length + 1,  //Generate new ID
+                name: reviewerName,
+                text: reviewText
+            };
+            reviews.push(newReview);
+        } else {
+            reviews[editIndex].name = reviewerName;
+            reviews[editIndex].text = reviewText;
+            editIndex = -1;
+        }
+
+        displayReviews();
+        $('#writeReviewModal').modal('hide');
+       
+    });
+
+    //Edit review
+    $('#reviewList').on('click', '.edit-btn', function() {
+        editIndex = $(this).data('index');
+        const review = reviews[editIndex];
+
+        $('#reviewerName').val(review.name);
+        $('#reviewText').val(review.text);
+        $('#writeReviewModal').modal('show');
+    });
+
+    //Delete review
+    $('#reviewList').on('click', '.delete-btn', function() {
+        const index = $(this).data('index');
+        reviews.splice(index, 1);
+
+        displayReviews();
+    });
+
+    
+});
 
 

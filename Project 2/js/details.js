@@ -1,16 +1,24 @@
-// Dohvati podatke iz lokalne pohrane
-var reservationData = localStorage.getItem('reservationData');
+//Data from localstorage
+var reservationData = JSON.parse(localStorage.getItem('reservationData'));
+console.log(reservationData.fname)
 if (reservationData) {
-    // Ako postoje podaci, pretvori ih iz JSON-a u objekt
-    reservationData = JSON.parse(reservationData);
-    // Prikazi podatke na stranici
-    document.getElementById('reservationDetails').innerHTML = `
-        <p>First Name: ${reservationData.fname}</p>
-        <p>Last Name: ${reservationData.lname}</p>
-        <p>Email: ${reservationData.email}</p>
-        <!-- Dodajte ovdje ostale podatke koje želite prikazati -->
-    `;
+    //If data exists, turn it into JSON object
+    //Show data on page
+    $(document).ready(function() {
+        document.getElementById('reservationDetails').innerHTML = `
+            <p>First Name: ${reservationData.fname}</p>
+            <p>Last Name: ${reservationData.lname}</p>
+            <p>Email: ${reservationData.email}</p>
+            <p>Phone: ${reservationData.phone}</p>
+            <p>Occasion: ${reservationData.occasion}</p>
+            <p>Guests: ${reservationData.guests}</p>
+            <p>Date: ${reservationData.date}</p>
+            <p>Time: ${reservationData.time}</p>
+            <p>Message: ${reservationData.message}</p>
+            
+        `;
+    });
 } else {
-    // Ako nema podataka, prikaži poruku
+    //If there are no data, show the error message
     document.getElementById('reservationDetails').innerHTML = '<p>No reservation details found.</p>';
 }
