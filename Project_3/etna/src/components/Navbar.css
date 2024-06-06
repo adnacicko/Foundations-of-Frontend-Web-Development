@@ -1,0 +1,84 @@
+.navbar {
+  background-color: pink;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f05b5b;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.navbar-logo::before {
+  content: "♥";
+  display: inline-block;
+  color: #f05b5b;
+  font-size: 2rem;
+  margin-right: 5px;
+}
+
+
+.navbar-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar-item {
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.navbar-item:hover {
+  color: #f05b5b;
+}
+
+/* Responsive styles */
+
+/* Tablet and below */
+@media (max-width: 1024px) {
+ .navbar {
+    padding: 0.5rem;
+  }
+ .navbar-logo {
+    font-size: 1.8rem;
+  }
+ .navbar-item {
+    font-size: 1.1rem;
+    margin-left: 15px;
+  }
+}
+
+/* Mobile and below */
+@media (max-width: 768px) {
+ .navbar {
+    flex-direction: column;
+  }
+ .navbar-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+ .navbar-item {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}
+
+/* Small mobile and below */
+@media (max-width: 480px) {
+ .navbar {
+    padding: 0.2rem;
+  }
+ .navbar-logo {
+    font-size: 1.5rem;
+  }
+ .navbar-item {
+    font-size: 1rem;
+  }
+}

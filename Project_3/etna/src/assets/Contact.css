@@ -1,0 +1,25 @@
+.pozadina{
+    background-color: white !important;
+    margin:40px;
+ 
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 130%;
+    padding: 0 20px;
+}
+ 
+.text-field {
+    width: 300px;
+    margin-bottom: 20px;
+}
+ 
+
+.naslov{
+    padding-top: 10px;
+    color: #f05b5b;
+    
+}
