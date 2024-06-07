@@ -6,6 +6,7 @@ import styled from '@emotion/styled';
 
 const Container = styled(Box)`
   padding: 20px;
+  padding-bottom: 210px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,6 +22,7 @@ const HeroText = styled(Typography)`
 const StyledPaper = styled(Paper)`
   padding: 20px;
   text-align: center;
+  background-color: rgb(247 252 186)
 `;
 
 const BodyText = styled(Typography)`
