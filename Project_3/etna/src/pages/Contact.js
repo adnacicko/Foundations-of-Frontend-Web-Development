@@ -32,6 +32,7 @@ const Contact = () => {
         if (Object.keys(newErrors).length === 0) {
             localStorage.setItem('name', name);
             localStorage.setItem('email', email);
+            localStorage.setItem('message', message);
             setOpen(true);
         }
     };

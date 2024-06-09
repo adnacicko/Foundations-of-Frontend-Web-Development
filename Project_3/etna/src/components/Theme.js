@@ -4,12 +4,12 @@ import { createTheme } from '@mui/material/styles';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#1976d2', // customize primary color
+      main: '#1976d2', 
     },
     secondary: {
-      main: '#dc004e', // customize secondary color
+      main: '#dc004e', 
     },
-    // Add more custom colors as needed
+   
   },
   typography: {
     fontFamily: [
@@ -17,15 +17,15 @@ const theme = createTheme({
       'sans-serif',
     ].join(','),
     h1: {
-      fontSize: '22', // customize heading font size
-      fontWeight: 'bold', // customize heading font weight
+      fontSize: '22', 
+      fontWeight: 'bold', 
       color: '#f05b5b',
       paddingTop: 20,
       textAlign: 'center',
     },
-    // Add more typography styles as needed
+    
   },
-  // Add more custom styles here
+  
 });
  
 export default theme;
